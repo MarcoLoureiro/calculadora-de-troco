@@ -1,0 +1,41 @@
+{{>partials/header}}
+
+
+
+
+<div class="container contact-form">
+    <div class="contact-image">
+        <img src="https://www.seekpng.com/png/detail/137-1372059_calculator-icon-ico-calculator-icon.png" alt="Calculator Icon - Ico Calculator Icon@seekpng.com">
+    </div>
+    <form method="get" action="/">
+        <h3>Calcule seu troco ;D</h3>
+       <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <input type="number" name="valor" class="form-control" placeholder="Valor da compra em R$" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="number" name="valorPago" class="form-control" placeholder="Valor pago pelo cliente em R$" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btnContact" value="Calcular" />
+                </div>
+            </div>
+            {{#show}}
+            <div class="col-md-12">
+                <label>Valor da compra:</label> <br>
+                <div class="form-group">
+                    <textarea name="txtMsg" class="form-control" placeholder="Valor da compra:" style="width: 100%; height: 50px;" readonly>{{#show}} {{valor}} R${{/show}}</textarea>
+                </div>
+                <label>Troco em notas: </label> <br>
+                <div class="form-group">
+                    <textarea name="txtMsg" class="form-control" placeholder="Valor da compra:" style="width: 100%; height: 50px;" readonly>{{#show}} {{troco}} {{/show}}</textarea>
+                </div>
+                
+            </div>
+            {{/show}}
+        </div>
+    </form>
+</div>
+
+{{>partials/footer}}
